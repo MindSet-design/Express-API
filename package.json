@@ -1,7 +1,7 @@
 {
-  "name": "express-api-server-mongodb",
+  "name": "express-api",
   "version": "1.0.0",
-  "description": "express-api-server-mongodb",
+  "description": "api to connect to mongodb",
   "main": "server.js",
   "dependencies": {
     "cors": "^2.8.5",
