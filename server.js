@@ -38,7 +38,7 @@ MongoClient.connect(uri,
         })
 
         app.get('/results/get', (req,res) => {
-            db.collection('results').find().toArray()
+            db.collection('Surveys').find().toArray()
             .then(results => {
                 res.send(results)
                 console.log(results)
