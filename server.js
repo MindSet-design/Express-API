@@ -14,21 +14,19 @@ MongoClient.connect(uri,
  { useUnifiedTopology:true})
     .then(client=>{
         console.log('connected to database')
-        const db=client.db('survey_results')
-        const resultsCollection=db.collection('results')
+        const db=client.db('SurveysDb')
+        const resultsCollection=db.collection('Surveys')
 
         app.post('/results/post', (req, res)=> {
             var data=req.body;
             resultsCollection.insertOne({
-                Name: data.Name,
                 Company: data.Company,
+                Position: data.Position,
                 City: data.City,
                 Province: data.Province,
                 Country: data.Country,
-                RFV: data.RFV,
-                Industry: data.Industry,
-                WorkLocation: data.WorkLocation,
-                TravelReq: data.TravelReq
+                Interest: data.Interest,
+                Comments: data.Comments
             })
             .then(result => {
                 res.sendStatus(200)
