@@ -1,2 +1,2 @@
 # Express-API-Server-MongoDB
- ExpressAPI hosted on Heroku httpget and httppush only
+ ExpressAPI hosted on Heroku. !No Longer Active!
